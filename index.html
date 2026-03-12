@@ -17,90 +17,109 @@
       justify-content: center;
       font-family: 'Playfair Display', serif;
     }
+
     .card-container {
       position: relative;
       width: 100%;
-      max-width: 420px;
+      max-width: 480px;          /* Slightly wider max for better readability */
       margin: 1rem;
       border-radius: 1.5rem;
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     }
+
     .card-container img {
       width: 100%;
       height: auto;
       display: block;
     }
+
     .overlay-buttons {
       position: absolute;
-      bottom: 30px;               
+      bottom: 5%;               /* Relative positioning – better than fixed cm */
       left: 0;
       right: 0;
-      top: 5cm;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 5px;
-      padding: 0 20px;
+      gap: 12px;                /* Reasonable spacing between buttons */
+      padding: 0 16px;
     }
+
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      max-width: 320px;
-     
-      font-size: 1.1rem;
+      width: 85%;               /* Almost full width on mobile */
+      max-width: 360px;
+      padding: 14px 24px;       /* Comfortable touch area */
+      font-size: 1.05rem;       /* Readable but not too big */
       font-weight: 600;
       border-radius: 9999px;
       text-decoration: none;
       transition: all 0.25s ease;
       backdrop-filter: blur(6px);
+      min-height: 48px;         /* Minimum touch target height */
     }
+
     .map-btn {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.88);
       color: #4a2c0f;
-     font-size: 0.4cm;
-     width: 85%;
-      padding: 5px 10px;
-     
+      border: 1.5px solid #c19a2e;
     }
-    .map-btn:hover {
-      background: rgba(255, 255, 255, 0.95);
+
+    .map-btn:hover,
+    .map-btn:focus {
+      background: rgba(255, 255, 255, 0.98);
       transform: scale(1.03);
     }
+
     .rsvp-btn {
-      background: rgba(178, 136, 0, 0.85);   /* gold semi-transparent */
+      background: rgba(178, 136, 0, 0.88); /* gold tone */
       color: white;
       border: none;
-      width: 55%;
-       padding: 14px 24px;
-       font-size: 0.4cm;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
     }
-    .rsvp-btn:hover {
+
+    .rsvp-btn:hover,
+    .rsvp-btn:focus {
       background: rgba(212, 175, 55, 0.95);
       transform: scale(1.03);
     }
+
+    /* Mobile adjustments */
     @media (max-width: 480px) {
-      .overlay-buttons { bottom: 20px; gap: 10px; }
-      .btn { padding: 12px 20px; font-size: 1rem; }
+      .overlay-buttons {
+        bottom: 4%;
+        gap: 10px;
+        padding: 0 12px;
+      }
+
+      .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;     /* Slightly smaller text on very small screens */
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .btn {
+        font-size: 0.9rem;
+        padding: 10px 18px;
+      }
     }
   </style>
 </head>
 <body>
-
   <div class="card-container">
-
     <!-- Your invitation card image -->
-    <img 
-      src="./invitation-card.jpg" 
+    <img
+      src="./invitation-card.jpg"
       alt="Wedding Invitation Card"
     />
 
     <!-- Buttons overlaid on the bottom of the image -->
     <div class="overlay-buttons">
-
       <a href="https://maps.app.goo.gl/9huxdCqZa8YyqHoT7"
          target="_blank"
          class="btn map-btn">
@@ -112,11 +131,7 @@
          class="btn rsvp-btn">
         Reception To Follow
       </a>
-
     </div>
-
   </div>
-
 </body>
 </html>
-
