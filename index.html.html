@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chinththaka & Kithmini Wedding Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: #f9f7f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+    }
+    .card-container {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      margin: 1rem;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .card-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .overlay-buttons {
+      position: absolute;
+      bottom: 30px;               
+      left: 0;
+      right: 0;
+      top: 11.8cm;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      padding: 0 20px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 320px;
+     
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(6px);
+    }
+    .map-btn {
+      background: rgba(255, 255, 255, 0.85);
+      color: #4a2c0f;
+     font-size: 0.4cm;
+     width: 85%;
+      padding: 5px 10px;
+     
+    }
+    .map-btn:hover {
+      background: rgba(255, 255, 255, 0.95);
+      transform: scale(1.03);
+    }
+    .rsvp-btn {
+      background: rgba(178, 136, 0, 0.85);   /* gold semi-transparent */
+      color: white;
+      border: none;
+      width: 55%;
+       padding: 14px 24px;
+       font-size: 0.4cm;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      
+    }
+    .rsvp-btn:hover {
+      background: rgba(212, 175, 55, 0.95);
+      transform: scale(1.03);
+    }
+    @media (max-width: 480px) {
+      .overlay-buttons { bottom: 20px; gap: 10px; }
+      .btn { padding: 12px 20px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-container">
+
+    <!-- Your invitation card image -->
+    <img 
+      src="./invitation-card.jpg.jpg" 
+      alt="Wedding Invitation Card"
+    />
+
+    <!-- Buttons overlaid on the bottom of the image -->
+    <div class="overlay-buttons">
+
+      <a href="https://maps.app.goo.gl/9huxdCqZa8YyqHoT7"
+         target="_blank"
+         class="btn map-btn">
+        📍 at Sawingir Hills Hotel, Gonapola
+      </a>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLtCvNJfafNLbSfaQOM0n575UM_AyJSc8X5QTWYbMPGqc53w/viewform?usp=publish-editor"
+         target="_blank"
+         class="btn rsvp-btn">
+        Reception To Follow
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
